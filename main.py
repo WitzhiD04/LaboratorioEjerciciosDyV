@@ -19,9 +19,7 @@ def getOrderRotationSequence_aux(S, b, e):
     if S[q] >= S[b]:
         return getOrderRotationSequence_aux(S, q + 1, e)
     elif S[q] < S[b]:
-        return getOrderRotationSequence_aux(S, b, q)
-    else: 
-        return getOrderRotationSequence_aux(S, b, e-1)
+        return getOrderRotationSequence_aux(S, b, q - 1)
 
 
 def getOrderRotationSequence(S):
